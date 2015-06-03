@@ -1,3 +1,6 @@
 What happens when you initialize a repository? Why do you need to do it?
 To get git monitoring the repository
 To monitor the files in the repository when commited
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+Staging area tells git what to monitor but is not yet commited
