@@ -29,3 +29,7 @@ This is equilvalent to these two commands:
 git branch new_branch_name
 git checkout new_brabch_name
 
+What is the result of merging two branches together?
+Why do we represent it in the diagram the way we do?
+Merging two branches together merges the changes that have taken place separately
+The two branches are joined during a merge to reflect the 
