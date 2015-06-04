@@ -32,4 +32,12 @@ git checkout new_brabch_name
 What is the result of merging two branches together?
 Why do we represent it in the diagram the way we do?
 Merging two branches together merges the changes that have taken place separately
-The two branches are joined during a merge to reflect the 
+The two branches are joined during a merge to reflect both the changes
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+Pros
+Takes out the tedious task of merging two separate branches' modification
+Cons
+Git can't always figure out how to merge all the changes from the separate branches.
+So these will then have to be resolved manually
+
