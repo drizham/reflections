@@ -3,3 +3,6 @@ When you would like to:
 - Access the repository from a separate location / computer.
 - Make modifications to the repository from a different location / computer.
 - Share the work / collaborate.
+
+Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+Because you would only want to share a working version of the work and not all its intermediate states.
