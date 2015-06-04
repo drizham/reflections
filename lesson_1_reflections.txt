@@ -1,47 +1,47 @@
-Notes from
+Notes from How to Use Git and GitHub
 
-Use the diff command to see the the difference between two files
-diif -u <file0> <file1>
-
-Having access to the history of a file woud allow reverting back to specific files
+Why use a versioning system?
+Having access to the history of a file woud allow reverting back to specific files.
 
 Commits
-Each commit has an id
-Author
-Date
-Comment
+Each commit has an ID, Author, Date and Comment
 
-
+// git command for checking differences between files
 git diff <old_file> <new_file>
 
+// unix diff command to see the the difference between two files
+diif -u <file0> <file1>
+
 Commit Rules
-one commit per logical change. For example, if you fixed a typo, then fixed a bug in a separate part of the file, you should use one commit for each change since they are logically separate. If you do this, each commit will have one purpose that can be easily understood. Git allows you to write a short message explaining what was changed in each commit, and that message will be more useful if each commit has a single logical change.
+One commit per logical change.
+For example, if you fixed a typo, then fixed a bug in a separate part of the file.
+You should use one commit for each change since they are logically separate.
+If you do this, each commit will have one purpose that can be easily understood.
+Git allows you to write a short message explaining what was changed in each commit.
+These messages will be more useful if each commit has a single logical change.
 
-Repository
-A collection of files are stored in a repository
+Repository - A collection of files are stored in a repository.
 
-A commit is a snapshot
+A commit is a 'snapshot'.
 
-Number of + and - shows the number of commits
+Number of + and - shows the number of line changes in a commit
 
-Git clone
-clones and entire repository
-
-clone a repository
-from the directory to clone to:
+// Git clone - clones and entire repository
+// clone a repository from the directory to clone to:
 git clone <address of repository to clone>
 e.g.
 git clone https://github.com/udacity/asteroids.git
 
-to check the log of changes:
+// check the log of changes:
 git log
 
-to find the difference between two files:
+// Use git diff and the ids to find the difference between two files
 git diff <id new change> <id old change>
+e.g.
 git diff b0678b161fcf74467ed3a63110557e3d6229cfa6 f19cb1b80fe27e938e4d72770ca0a42f25e99ecc
 
-// checking out a previous version
-git checkout 
+// checking out a previous version of the source
+git checkout <id>
 
 // git configuration & command line setup (colours etc)
 // https://www.udacity.com/course/viewer#!/c-ud775/l-2980038599/m-3333158951
@@ -64,3 +64,57 @@ Setting a git in a new folder
 git init (this does not commit anything)
 
 git status - shows the status of the repository
+
+// Choosing what changes to and then commit
+// Work flow:
+
+Working Directory -> Staging Area -> Repository
+git command:    - add -       - commit -
+
+// Adding file from the working directory to the staging area
+git add <file>
+
+// Commit everything within the staging area to repository
+git commit
+
+// Get difference between Working Directory -> Staging Area
+// Use git diff without any anrguments
+git diff
+
+// Get the difference between Staging Area -> Repository (most recent commit)
+git diff --staged
+
+// Branches
+// With no argument shows where you are
+git branch
+
+// Create a new branch
+git branch <new branch name>
+
+e.g. create a branch called easy-mode
+git branch easy-mode
+
+git checkout easymode // only now will the changes affect easymode
+
+Create Easy Mode (exercise)
+1. Create easy mode branch > git branch easy-mode
+2. Check out the branch > git checkout easy-mode
+3. Commit a change making game easier.
+	> git add // add to staging area
+	> git commit // commit changes to repository
+
+// Another way to see the log
+// With a one line description and 
+git log --graph --oneline
+
+// Merging branches
+// if not already checked out checkout master branch
+git checkout master
+// verify that you are on the master branch
+git branch
+// perform the merge
+git merge master coins
+
+// Show changes made at a specific commit
+git show <id>
+
