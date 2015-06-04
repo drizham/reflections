@@ -1,6 +1,31 @@
-What happens when you initialize a repository? Why do you need to do it?
-To get git monitoring the repository
-To monitor the files in the repository when commited
+What happens when you initialize a repository? (git init)
+Why do you need to do it?
+To get git monitoring the repository.
+To monitor the files in the repository when committed.
 
-How is the staging area different from the working directory and the repository? What value do you think it offers?
-Staging area tells git what to monitor but is not yet commited
+How is the staging area different from the working directory and the repository?
+What value do you think it offers?
+Staging area tells git what to monitor but is not yet committed.
+
+How can you use the staging area to make sure you have one commit per logical change?
+When files are added to the staging area only one change should be implement at a time.
+Once the changes have been made and tested only then should they be commited.
+*Looks like best to commit a file/s that only have been changed
+
+What are some situations when branches would be helpful in keeping your history organized?
+How would branches help?
+- Branch off when making experiments or major changes.
+- Doing something different.
+Master Branch - Keep this as the 'Production Quality Branch'
+
+The 'detached Head' message
+You get this when a 'commit' is checked out.
+*not a branch!
+
+If you want to create a new branch to retain commits create it by using:
+git checkout -b new_branch_name
+
+This is equilvalent to these two commands:
+git branch new_branch_name
+git checkout new_brabch_name
+
