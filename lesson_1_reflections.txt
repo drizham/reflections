@@ -118,3 +118,26 @@ git merge master coins
 // Show changes made at a specific commit
 git show <id>
 
+// Adding a remote repository
+1. Log in to GitHub.
+2. Add a new repository by clicking the + sign at the top right hand corner bar.
+3. Name the repository. (optionally provide a description too)
+4. If there are commits on the local repository do not initialize a read me file.
+
+// Use git remote to check if there are any remote repositories
+git remote
+
+// Add a remote repository
+// its is customary to name the remote repository 'origin'
+git remote add origin
+
+e.g.
+git remote add origin https://github.com/drizham/reflections.git
+
+// to check if the remote repository has been added
+git remote -v
+// the -v is for verbose and will show the path to the remote repository
+
+// Push the local 'master' repository to the remote repository called 'origin'
+git push origin master
+
